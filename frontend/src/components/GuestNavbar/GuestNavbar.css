@@ -1,0 +1,40 @@
+nav {
+  padding: 1rem;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .button-section {
+    display: flex;
+    gap: 0.5rem;
+
+    button {
+      padding: 8px 18px;
+      border-radius: 10px;
+      border: 2px solid #3b82f6;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: 200ms;
+        cursor: pointer;
+      }
+    }
+
+    .btn-login {
+      background-color: transparent;
+      color: #3b82f6;
+    }
+
+    .btn-signup {
+      background-color: #3b82f6;
+      color: #fff;
+    }
+  }
+}
