@@ -1,0 +1,73 @@
+.hero-section {
+  min-height: 500px;
+
+  .introduction-message {
+    position: relative;
+    height: 600px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(62, 62, 62, 0.5), rgba(62, 62, 62, 0.5)),
+        url("../../assets/landing/HeroSection_Image.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    & > * {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      max-width: 900px;
+      text-align: center;
+    }
+  }
+}
+
+.how-it-works {
+  transform: translateY(-180px);
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 4rem 1.5rem;
+  position: absolute;
+  width: 100%;
+}
+
+.step-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 300px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #2563eb;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,5 +1,5 @@
 nav {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -36,5 +36,17 @@ nav {
       background-color: #3b82f6;
       color: #fff;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    padding: 1rem 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  nav {
+    padding: 1rem 6rem;
   }
 }
