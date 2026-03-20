@@ -24,6 +24,45 @@ const steps = [
   },
 ];
 
+const features = [
+  {
+    icon: "dashboard",
+    title: "User-Friendly Dashboard",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    icon: "interactive",
+    title: "Interactive Courses",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    icon: "quiz",
+    title: "Quiz-Based Activities",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    icon: "feedback",
+    title: "Instant Feedback",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    icon: "progress",
+    title: "Progress Tracking",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    icon: "token",
+    title: "Tokenized Rewards",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+];
+
 const Landing = () => {
   return (
     <div>
@@ -47,6 +86,18 @@ const Landing = () => {
             </div>
           ))}
         </div>
+      </section>
+      <section className="features">
+        <h1>Features</h1>
+        {features.map((feature, i) => (
+          <div key={i} className="feature-card">
+            <div className="feature-header">
+              <Icon name={feature.icon} size={28} />
+              <h3>{feature.title}</h3>
+            </div>
+            <p>{feature.description}</p>
+          </div>
+        ))}
       </section>
     </div>
   );
