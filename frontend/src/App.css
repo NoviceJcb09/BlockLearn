@@ -4,3 +4,12 @@
   box-sizing: border-box;
   font-family: "Varela Round", sans-serif;
 }
+
+button {
+  cursor: pointer;
+  transition: transform 200ms;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
