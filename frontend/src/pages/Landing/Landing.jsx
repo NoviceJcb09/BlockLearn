@@ -2,6 +2,7 @@ import "./Landing.css";
 import GuestNavbar from "../../components/GuestNavbar/GuestNavbar";
 import Icon from "../../components/Icon";
 import Button from "../../components/Button";
+import Footer from "../../components/Footer/Footer";
 
 const steps = [
   {
@@ -104,6 +105,8 @@ const Landing = () => {
         <h3>Take the first step towards the future.</h3>
         <Button>Get Started</Button>
       </section>
+
+      <Footer />
     </main>
   );
 };

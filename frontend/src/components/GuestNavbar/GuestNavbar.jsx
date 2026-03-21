@@ -1,4 +1,3 @@
-import React from "react";
 import "./GuestNavbar.css";
 import Icon from "../Icon";
 import Button from "../Button";
