@@ -1,7 +1,7 @@
-import React from "react";
 import "./Landing.css";
 import GuestNavbar from "../../components/GuestNavbar/GuestNavbar";
 import Icon from "../../components/Icon";
+import Button from "../../components/Button";
 
 const steps = [
   {
@@ -65,7 +65,7 @@ const features = [
 
 const Landing = () => {
   return (
-    <div>
+    <main>
       <GuestNavbar />
       <section className="hero-section">
         <div className="introduction-message">
@@ -79,27 +79,32 @@ const Landing = () => {
         </div>
         <div className="how-it-works">
           {steps.map((step, i) => (
-            <div key={i} className="step-card">
+            <article key={i} className="step-card">
               <Icon name={step.icon} size={50} />
               <h3>{step.title}</h3>
               <p>{step.description}</p>
-            </div>
+            </article>
           ))}
         </div>
       </section>
       <section className="features">
         <h1>Features</h1>
         {features.map((feature, i) => (
-          <div key={i} className="feature-card">
+          <article key={i} className="feature-card">
             <div className="feature-header">
               <Icon name={feature.icon} size={28} />
               <h3>{feature.title}</h3>
             </div>
             <p>{feature.description}</p>
-          </div>
+          </article>
         ))}
       </section>
-    </div>
+
+      <section className="short-message">
+        <h3>Take the first step towards the future.</h3>
+        <Button>Get Started</Button>
+      </section>
+    </main>
   );
 };
 
