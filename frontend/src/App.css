@@ -5,6 +5,10 @@
   font-family: "Varela Round", sans-serif;
 }
 
+body {
+  background-color: #f3f4f5;
+}
+
 button {
   cursor: pointer;
   transition: transform 200ms;

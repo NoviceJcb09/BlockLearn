@@ -1,0 +1,110 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+
+  .login {
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+
+    img {
+      width: 550px;
+      height: auto;
+      object-fit: contain;
+      background-color: #f59e42;
+    }
+
+    .form-section {
+      padding: 5rem;
+      background-color: #fffeff;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+
+      .top-section {
+        :first-child {
+          color: #811adb;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .input-wrapper {
+          display: flex;
+          align-items: center;
+          border: 1px solid black;
+          padding: 0.5rem;
+          border-radius: 5px;
+          gap: 0.5rem;
+
+          &:focus-within {
+            border: 1px solid #811adb;
+          }
+
+          input {
+            outline: none;
+            flex: 1;
+            border: none;
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus {
+              -webkit-box-shadow: 0 0 0px 1000px white inset;
+              box-shadow: 0 0 0px 1000px white inset;
+            }
+          }
+          button {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            padding: 0;
+          }
+        }
+      }
+
+      .btn-login-submit {
+        background-color: #2563eb;
+        color: #fff;
+        border: none;
+        padding: 8px 13px;
+        border-radius: 5px;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    p {
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .login {
+      img {
+        display: none;
+      }
+
+      .form-section {
+        width: 100%;
+
+        .top-section {
+          :last-child {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
