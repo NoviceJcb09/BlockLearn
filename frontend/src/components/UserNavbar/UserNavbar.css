@@ -1,17 +1,26 @@
 .user-navbar {
-  padding: var(--navbar-padding);
   box-shadow: var(--navbar-shadow);
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   .logo-section {
+    background-color: #1e293b;
     display: flex;
     align-items: center;
+    align-self: stretch;
     gap: 0.5rem;
+    width: 240px;
+    padding-left: 1.5rem;
+
+    :last-child {
+      color: #fff;
+      font-weight: 600;
+    }
   }
 
   .nav-actions {
+    padding: var(--navbar-padding);
     display: flex;
     align-items: center;
     gap: 1rem;
