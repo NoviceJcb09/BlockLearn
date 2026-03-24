@@ -1,8 +1,8 @@
 import "./App.css";
-import Register from "./pages/Register/Register";
+import UserNavbar from "./components/UserNavbar/UserNavbar";
 
 function App() {
-  return <Register />;
+  return <UserNavbar />;
 }
 
 export default App;

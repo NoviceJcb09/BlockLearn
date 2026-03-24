@@ -1,13 +1,18 @@
-import React from "react";
+import "./UserNavbar.css";
 import Icon from "../Icon";
 
 const UserNavbar = () => {
   return (
-    <div>
-      <Icon name="logo" size={40} />
-      <Icon name="search" size={40} />
-      <Icon name="star" size={40} />
-    </div>
+    <nav>
+      <div className="logo-section">
+        <Icon name="logo" size={40} />
+        <h2>BlockLearn</h2>
+      </div>
+      <div className="nav-actions">
+        <Icon name="notif-bell" size={28} className="notif-bell" />
+        <button className="user-avatar">JC</button>
+      </div>
+    </nav>
   );
 };
 

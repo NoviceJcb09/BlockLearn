@@ -1,0 +1,39 @@
+nav {
+  padding: var(--navbar-padding);
+  box-shadow: var(--navbar-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    svg {
+      cursor: pointer;
+      transition: transform 200ms;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .user-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #2563eb;
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+  }
+}
