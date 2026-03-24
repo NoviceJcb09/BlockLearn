@@ -27,9 +27,13 @@
       }
 
       &:hover {
-        background-color: #1e40af;
+        background-color: #3b82f633;
         color: #2563eb;
         stroke: #2563eb;
+
+        span {
+          color: #2563eb;
+        }
       }
     }
   }
