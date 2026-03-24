@@ -17,6 +17,7 @@
 }
 .dashboard-layout > .dashboard-main {
   grid-area: main;
+  padding: 2rem;
 }
 .dashboard-layout > footer {
   grid-area: footer;
