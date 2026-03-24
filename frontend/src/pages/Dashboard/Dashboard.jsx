@@ -1,5 +1,6 @@
 import Icon from "../../components/Icon";
-import { widgets } from "../../data/dashboardData";
+import CourseCard from "../../components/CourseCard/CourseCard";
+import { widgets, courses } from "../../data/dashboardData";
 import "./Dashboard.css";
 
 const Dashboard = () => {
@@ -23,7 +24,8 @@ const Dashboard = () => {
                 <Icon name={widget.icon} size={25} />
               </span>
               <h3>
-                {widget.title.split(" ")[0]}<br/>
+                {widget.title.split(" ")[0]}
+                <br />
                 {widget.title.split(" ").slice(1).join(" ")}
               </h3>
             </div>
@@ -35,6 +37,24 @@ const Dashboard = () => {
             </div>
           </div>
         ))}
+      </section>
+
+      <section className="user-courses">
+        <div className="top-section">
+          <h2>Courses</h2>
+
+          <button>
+            View All <Icon name="arrow-right" size={16} />
+          </button>
+        </div>
+
+        <hr />
+
+        <div className="courses-container">
+          {courses.map((course, index) => (
+            <CourseCard key={course.id} index={index} {...course} />
+          ))}
+        </div>
       </section>
     </div>
   );

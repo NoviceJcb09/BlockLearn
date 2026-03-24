@@ -47,8 +47,44 @@
     }
   }
 
-  @media (max-width: 768px) {
-    .widgets {
+  .user-courses {
+    background: #ffffff;
+    box-shadow: 0px 1px 4px 0px #00000040;
+    border-radius: 5px;
+    padding: 1.25rem;
+
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 1rem;
+        cursor: pointer;
+
+        svg {
+          color: #2563eb;
+        }
+      }
+    }
+
+    hr {
+      margin: 1rem 0;
+    }
+  }
+
+  .courses-grid,
+  .courses-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
   }
