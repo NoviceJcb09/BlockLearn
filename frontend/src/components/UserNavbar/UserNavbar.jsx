@@ -3,7 +3,7 @@ import Icon from "../Icon";
 
 const UserNavbar = () => {
   return (
-    <nav>
+    <nav className="user-navbar">
       <div className="logo-section">
         <Icon name="logo" size={40} />
         <h2>BlockLearn</h2>

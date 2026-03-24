@@ -1,4 +1,4 @@
-nav {
+.guest-navbar {
   padding: var(--navbar-padding);
   background-color: #ffffff;
   box-shadow: var(--navbar-shadow);
@@ -35,13 +35,13 @@ nav {
 }
 
 @media (min-width: 768px) {
-  nav {
+  .guest-navbar {
     padding: 1rem 3rem;
   }
 }
 
 @media (min-width: 1280px) {
-  nav {
+  .guest-navbar {
     padding: 1rem 6rem;
   }
 }

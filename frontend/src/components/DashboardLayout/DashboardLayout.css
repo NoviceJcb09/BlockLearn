@@ -1,0 +1,23 @@
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "navbar  navbar"
+    "sidebar main"
+    "sidebar footer";
+  min-height: 100vh;
+}
+
+.dashboard-layout > .user-navbar {
+  grid-area: navbar;
+}
+.dashboard-layout > aside {
+  grid-area: sidebar;
+}
+.dashboard-layout > .dashboard-main {
+  grid-area: main;
+}
+.dashboard-layout > footer {
+  grid-area: footer;
+}

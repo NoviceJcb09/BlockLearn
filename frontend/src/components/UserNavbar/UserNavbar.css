@@ -1,4 +1,4 @@
-nav {
+.user-navbar {
   padding: var(--navbar-padding);
   box-shadow: var(--navbar-shadow);
   display: flex;

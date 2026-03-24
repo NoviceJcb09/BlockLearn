@@ -1,8 +1,13 @@
 import "./App.css";
-import Sidebar from "./components/Sidebar/Sidebar";
+import DashboardLayout from "./components/DashboardLayout/DashboardLayout";
 
 function App() {
-  return <Sidebar />;
+  // Wrap any page inside DashboardLayout to get the navbar, sidebar, and footer
+  return (
+    <DashboardLayout>
+      <p>Page content goes here</p>
+    </DashboardLayout>
+  );
 }
 
 export default App;

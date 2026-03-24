@@ -4,7 +4,7 @@ import Button from "../Button";
 
 const GuestNavbar = () => {
   return (
-    <nav>
+    <nav className="guest-navbar">
       <div className="logo-section">
         <Icon name="logo" size={40} />
         <h2>BlockLearn</h2>
