@@ -1,8 +1,8 @@
 import "./App.css";
-import UserNavbar from "./components/UserNavbar/UserNavbar";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
-  return <UserNavbar />;
+  return <Sidebar />;
 }
 
 export default App;
