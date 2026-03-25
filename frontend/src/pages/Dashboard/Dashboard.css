@@ -58,7 +58,7 @@
       justify-content: space-between;
       align-items: center;
 
-      button {
+      a {
         background-color: transparent;
         border: none;
         display: flex;
@@ -66,6 +66,12 @@
         gap: 0.3rem;
         font-size: 1rem;
         cursor: pointer;
+        text-decoration: none;
+        transition: transform 200ms;
+
+        &:hover {
+          transform: scale(1.1);
+        }
 
         svg {
           color: #2563eb;

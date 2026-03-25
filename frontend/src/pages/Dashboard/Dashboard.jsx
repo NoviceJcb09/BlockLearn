@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Icon from "../../components/Icon";
 import CourseCard from "../../components/CourseCard/CourseCard";
 import { widgets, courses } from "../../data/dashboardData";
@@ -43,9 +44,9 @@ const Dashboard = () => {
         <div className="top-section">
           <h2>Courses</h2>
 
-          <button>
+          <Link to="/courses">
             View All <Icon name="arrow-right" size={16} />
-          </button>
+          </Link>
         </div>
 
         <hr />
