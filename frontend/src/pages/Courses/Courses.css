@@ -1,0 +1,21 @@
+.courses-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .courses-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

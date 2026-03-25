@@ -1,11 +1,12 @@
+import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 import Icon from "../Icon";
 
 const links = [
-  { icon: "dashboard", label: "Dashboard" },
-  { icon: "courses", label: "Courses" },
-  { icon: "ewallet", label: "E-Wallet" },
-  { icon: "profile", label: "Profile" },
+  { icon: "dashboard", label: "Dashboard", to: "/dashboard" },
+  { icon: "courses", label: "Courses", to: "/courses" },
+  { icon: "ewallet", label: "E-Wallet", to: "/e-wallet" },
+  { icon: "profile", label: "Profile", to: "/profile" },
 ];
 
 const Sidebar = () => {
@@ -15,10 +16,10 @@ const Sidebar = () => {
         <ul>
           {links.map((link) => (
             <li key={link.label}>
-              <a href="#">
+              <NavLink to={link.to} className={({ isActive }) => isActive ? "active" : ""}>
                 <Icon name={link.icon} size={20} />
                 <span>{link.label}</span>
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>

@@ -27,10 +27,9 @@
         color: #fff;
       }
 
-      &:hover {
+      &:hover, &.active {
         background-color: #3b82f633;
         color: #2563eb;
-        stroke: #2563eb;
 
         span {
           color: #2563eb;

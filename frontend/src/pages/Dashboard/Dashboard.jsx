@@ -51,7 +51,7 @@ const Dashboard = () => {
         <hr />
 
         <div className="courses-container">
-          {courses.map((course, index) => (
+          {courses.slice(0, 3).map((course, index) => (
             <CourseCard key={course.id} index={index} {...course} />
           ))}
         </div>
