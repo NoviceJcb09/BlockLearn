@@ -5,19 +5,19 @@ import "./Courses.css";
 const Courses = () => {
   return (
     <div className="courses-page">
-      <div className="top-section">
+      <section className="top-section">
         <h1>Courses</h1>
         <p>
           Access available courses, track enrolled subjects, and continue
           learning.
         </p>
-      </div>
+      </section>
 
-      <div className="courses-container">
+      <section className="courses-container">
         {courses.map((course, index) => (
           <CourseCard key={course.id} index={index} {...course} />
         ))}
-      </div>
+      </section>
     </div>
   );
 };

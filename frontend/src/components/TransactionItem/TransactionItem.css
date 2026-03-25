@@ -1,0 +1,121 @@
+.transaction-item {
+  border-bottom: 1px solid #000000;
+
+  .transaction-row {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1.5rem;
+    cursor: pointer;
+
+    .transaction-date {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      min-width: 40px;
+      color: #2563eb;
+
+      .date {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .month {
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      .day {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+    }
+
+    .transaction-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.2rem;
+
+      .amount {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-weight: 700;
+        color: #22c55e;
+        font-size: 1rem;
+      }
+
+      .message {
+        font-size: 0.8rem;
+        color: #6b7280;
+      }
+    }
+
+    .toggle-btn {
+      background: transparent;
+      border: none;
+      color: #6b7280;
+      font-size: 0.85rem;
+      cursor: pointer;
+      white-space: nowrap;
+
+      &:hover {
+        transform: none !important;
+      }
+
+      .chevron-up {
+        transform: rotate(180deg);
+        transition: transform 300ms ease-in-out;
+      }
+
+      svg {
+        transition: transform 300ms ease-in-out;
+      }
+    }
+  }
+
+  .transaction-details {
+    background: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-bottom: 0;
+    transition:
+      max-height 300ms ease-in-out,
+      opacity 300ms ease-in-out,
+      padding 300ms ease-in-out,
+      margin 300ms ease-in-out;
+
+    &.expanded {
+      max-height: 300px;
+      opacity: 1;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      border-color: #2563eb;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+
+      span:first-child {
+        color: #374151;
+        font-weight: 600;
+      }
+
+      span:last-child {
+        color: #2563eb;
+        font-weight: 500;
+      }
+    }
+  }
+}

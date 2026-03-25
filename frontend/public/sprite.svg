@@ -139,4 +139,16 @@
     <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
   </symbol>
 
+  <symbol id="icon-earn-arrow" viewBox="0 0 19 22" fill="none">
+    <path d="M17.6667 9.33333L9.33333 1L1 9.33333M17.6667 21L9.33333 12.6667L1 21" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-sad" viewBox="0 0 29 29" fill="none">
+    <path d="M19.6667 19.6667C19.6667 19.6667 17.6667 17 14.3333 17C11 17 9 19.6667 9 19.6667M10.3333 10.3333H10.3467M18.3333 10.3333H18.3467M27.6667 14.3333C27.6667 21.6971 21.6971 27.6667 14.3333 27.6667C6.96954 27.6667 1 21.6971 1 14.3333C1 6.96954 6.96954 1 14.3333 1C21.6971 1 27.6667 6.96954 27.6667 14.3333Z" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-chevron-down" viewBox="0 0 12 7" fill="none">
+    <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
 </svg>
