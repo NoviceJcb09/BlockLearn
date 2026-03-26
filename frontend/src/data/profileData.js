@@ -13,9 +13,27 @@ export const profileUser = {
 };
 
 export const profileStats = [
-  { id: 1, label: "Tokens Earned", value: "10,000", icon: bitcoin, isImg: true },
-  { id: 2, label: "Courses Enrolled", value: 5, icon: "courses-progress", iconBg: "#9225EB" },
-  { id: 3, label: "Courses Completed", value: 2, icon: "token-balance", iconBg: "#16a34a" },
+  {
+    id: 1,
+    label: "Tokens Earned",
+    value: "10,000",
+    icon: bitcoin,
+    isImg: true,
+  },
+  {
+    id: 2,
+    label: "Courses Enrolled",
+    value: 5,
+    icon: "courses-progress",
+    iconBg: "#9225EB",
+  },
+  {
+    id: 3,
+    label: "Courses Completed",
+    value: 2,
+    icon: "courses-progress",
+    iconBg: "#16a34a",
+  },
 ];
 
 export const profileBadges = [
