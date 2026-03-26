@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "./Icon";
 
-const Input = ({ type = "text", placeholder, value, onChange, className = "", leftIcon, ...props }) => {
+const Input = ({ type = "text", placeholder, value, onChange, className = "", leftIcon, label, id, ...props }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [internalValue, setInternalValue] = useState("");
 
@@ -12,8 +12,10 @@ const Input = ({ type = "text", placeholder, value, onChange, className = "", le
 
   return (
     <div className={`input-wrapper ${className}`}>
+      {label && <label htmlFor={id}>{label}</label>}
       {leftIcon && <Icon name={leftIcon} size={20} />}
       <input
+        id={id}
         type={inputType}
         placeholder={placeholder}
         value={currentValue}

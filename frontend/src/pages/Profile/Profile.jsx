@@ -15,6 +15,18 @@ const ProfilePage = () => {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
+  const autoCompleteMap = {
+    firstName: "given-name",
+    lastName: "family-name",
+    email: "email",
+    contactNumber: "tel",
+    birthdate: "off",
+    gender: "off",
+    country: "country-name",
+    timezone: "off",
+    description: "off",
+  };
+
   return (
     <div className="profile-page">
       {/* Header */}
@@ -89,25 +101,27 @@ const ProfilePage = () => {
             { name: "timezone", label: "Timezone" },
           ].map(({ name, label, type = "text", options }) => (
             <div key={name} className="form-group">
-              <label>{label}</label>
+              <label htmlFor={name}>{label}</label>
               {type === "select" ? (
-                <select name={name} value={form[name]} onChange={handleChange} disabled={!editing}>
+                <select id={name} name={name} value={form[name]} onChange={handleChange} disabled={!editing} autoComplete={autoCompleteMap[name]}>
                   {options.map((o) => <option key={o}>{o}</option>)}
                 </select>
               ) : (
-                <input type={type} name={name} value={form[name]} onChange={handleChange} disabled={!editing} />
+                <input id={name} type={type} name={name} value={form[name]} onChange={handleChange} disabled={!editing} autoComplete={autoCompleteMap[name]} />
               )}
             </div>
           ))}
 
           <div className="form-group full-width">
-            <label>Description</label>
+            <label htmlFor="description">Description</label>
             <textarea
+              id="description"
               name="description"
               value={form.description}
               onChange={handleChange}
               disabled={!editing}
               placeholder="Tell something about yourself..."
+              autoComplete="off"
             />
           </div>
         </div>
