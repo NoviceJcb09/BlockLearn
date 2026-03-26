@@ -5,22 +5,17 @@
   justify-content: space-between;
   background-color: #fff;
 
-  .logo-section {
+  .hamburger-section {
     background-color: #1e293b;
     display: flex;
     align-items: center;
+    justify-content: center;
     align-self: stretch;
-    gap: 0.5rem;
-    width: 240px;
-    padding-left: 1.5rem;
-
-    :last-child {
-      color: #fff;
-      font-weight: 600;
-    }
+    width: 60px;
+    flex-shrink: 0;
 
     .hamburger {
-      display: none;
+      display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 5px;
@@ -37,14 +32,18 @@
         border-radius: 2px;
       }
     }
+  }
 
-    @media (max-width: 768px) {
-      width: 240px;
-      padding: 0 1rem;
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 1.25rem;
+    flex: 1;
 
-      .hamburger {
-        display: flex;
-      }
+    h2 {
+      font-weight: 600;
+      color: #1e293b;
     }
   }
 

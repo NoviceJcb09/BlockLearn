@@ -19,11 +19,13 @@ const UserNavbar = ({ onHamburgerClick }) => {
 
   return (
     <nav className="user-navbar">
-      <div className="logo-section">
+      <div className="hamburger-section">
         <button className="hamburger" onClick={onHamburgerClick}>
           <span /><span /><span />
         </button>
-        <Icon name="logo" size={40} />
+      </div>
+      <div className="navbar-brand">
+        <Icon name="logo" size={36} />
         <h2>BlockLearn</h2>
       </div>
       <div className="nav-actions">
