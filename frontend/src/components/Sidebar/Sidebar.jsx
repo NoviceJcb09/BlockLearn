@@ -9,9 +9,9 @@ const links = [
   { icon: "profile", label: "Profile", to: "/profile" },
 ];
 
-const Sidebar = ({ isOpen, onClose }) => {
+const Sidebar = ({ expanded, mobileOpen, onClose }) => {
   return (
-    <aside className={`sidebar${isOpen ? " sidebar--open" : ""}`}>
+    <aside className={`sidebar${expanded ? " sidebar--expanded" : ""}${mobileOpen ? " sidebar--open" : ""}`}>
       <nav>
         <ul>
           {links.map((link) => (
@@ -26,7 +26,7 @@ const Sidebar = ({ isOpen, onClose }) => {
       </nav>
       <button className="logout">
         <Icon name="logout" size={20} />
-        Logout
+        <span>Logout</span>
       </button>
     </aside>
   );

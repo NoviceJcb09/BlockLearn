@@ -1,23 +1,30 @@
 import { useState } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import UserNavbar from "../UserNavbar/UserNavbar";
 import Sidebar from "../Sidebar/Sidebar";
 import Footer from "../Footer/Footer";
 import "./DashboardLayout.css";
 
 const DashboardLayout = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const { pathname } = useLocation();
-
-  const closeSidebar = () => setSidebarOpen(false);
+  const [expanded, setExpanded] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <div className="dashboard-layout">
-      <UserNavbar onHamburgerClick={() => setSidebarOpen((o) => !o)} />
+      <UserNavbar
+        onHamburgerClick={() => {
+          if (window.innerWidth <= 768) setMobileOpen((o) => !o);
+          else setExpanded((o) => !o);
+        }}
+      />
       <div className="dashboard-body">
-        {sidebarOpen && <div className="sidebar-overlay" onClick={closeSidebar} />}
-        <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} currentPath={pathname} />
-        <div className="dashboard-content">
+        {mobileOpen && <div className="sidebar-overlay" onClick={() => setMobileOpen(false)} />}
+        <Sidebar
+          expanded={expanded}
+          mobileOpen={mobileOpen}
+          onClose={() => setMobileOpen(false)}
+        />
+        <div className={`dashboard-content${expanded ? " sidebar-expanded" : ""}`}>
           <main className="dashboard-main">
             <Outlet />
           </main>
