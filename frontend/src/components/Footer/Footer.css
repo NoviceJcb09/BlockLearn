@@ -7,10 +7,16 @@ footer {
     padding-bottom: 1rem;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
 
     .footer-brand {
       width: 350px;
       color: #fff;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
 
       .logo {
         margin-bottom: 1rem;
@@ -24,6 +30,7 @@ footer {
       display: flex;
       gap: 2rem;
       color: #fff;
+      flex-wrap: wrap;
 
       .footer-links,
       .footer-contact {

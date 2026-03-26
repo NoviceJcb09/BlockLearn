@@ -9,14 +9,14 @@ const links = [
   { icon: "profile", label: "Profile", to: "/profile" },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, onClose }) => {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar${isOpen ? " sidebar--open" : ""}`}>
       <nav>
         <ul>
           {links.map((link) => (
             <li key={link.label}>
-              <NavLink to={link.to} className={({ isActive }) => isActive ? "active" : ""}>
+              <NavLink to={link.to} className={({ isActive }) => isActive ? "active" : ""} onClick={onClose}>
                 <Icon name={link.icon} size={20} />
                 <span>{link.label}</span>
               </NavLink>

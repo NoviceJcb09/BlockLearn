@@ -18,6 +18,34 @@
       color: #fff;
       font-weight: 600;
     }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.25rem;
+
+      span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 2px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 240px;
+      padding: 0 1rem;
+
+      .hamburger {
+        display: flex;
+      }
+    }
   }
 
   .nav-actions {

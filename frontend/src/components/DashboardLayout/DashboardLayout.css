@@ -39,3 +39,31 @@
   padding: 2rem;
   min-height: calc(100vh - var(--navbar-height));
 }
+
+@media (max-width: 768px) {
+  .dashboard-body > aside {
+    transform: translateX(-100%);
+    transition: transform 250ms ease;
+    width: 240px;
+  }
+
+  .dashboard-body > aside.sidebar--open {
+    transform: translateX(0);
+    display: flex;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 8;
+  }
+
+  .dashboard-content {
+    margin-left: 0;
+  }
+
+  .dashboard-main {
+    padding: 1rem;
+  }
+}

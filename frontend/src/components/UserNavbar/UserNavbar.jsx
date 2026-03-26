@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./UserNavbar.css";
 import Icon from "../Icon";
 
-const UserNavbar = () => {
+const UserNavbar = ({ onHamburgerClick }) => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -20,6 +20,9 @@ const UserNavbar = () => {
   return (
     <nav className="user-navbar">
       <div className="logo-section">
+        <button className="hamburger" onClick={onHamburgerClick}>
+          <span /><span /><span />
+        </button>
         <Icon name="logo" size={40} />
         <h2>BlockLearn</h2>
       </div>
