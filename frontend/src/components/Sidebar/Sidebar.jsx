@@ -20,14 +20,18 @@ const Sidebar = ({ expanded, mobileOpen, onClose }) => {
                 <Icon name={link.icon} size={20} />
                 <span>{link.label}</span>
               </NavLink>
+              <span className="sidebar-tooltip">{link.label}</span>
             </li>
           ))}
         </ul>
       </nav>
-      <button className="logout">
-        <Icon name="logout" size={20} />
-        <span>Logout</span>
-      </button>
+      <div className="logout-wrapper">
+        <button className="logout">
+          <Icon name="logout" size={20} />
+          <span>Logout</span>
+        </button>
+        <span className="sidebar-tooltip">Logout</span>
+      </div>
     </aside>
   );
 };
