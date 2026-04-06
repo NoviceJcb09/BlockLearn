@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 import Icon from "../Icon";
+import ModalFrame from "../Modal/ModalFrame";
+import Logout from "../Logout/Logout";
+import { useState } from "react";
 
 const links = [
   { icon: "dashboard", label: "Dashboard", to: "/dashboard" },
@@ -10,13 +13,21 @@ const links = [
 ];
 
 const Sidebar = ({ expanded, mobileOpen, onClose }) => {
+  const [showLogout, setShowLogout] = useState(false);
+
   return (
-    <aside className={`sidebar${expanded ? " sidebar--expanded" : ""}${mobileOpen ? " sidebar--open" : ""}`}>
+    <aside
+      className={`sidebar${expanded ? " sidebar--expanded" : ""}${mobileOpen ? " sidebar--open" : ""}`}
+    >
       <nav>
         <ul>
           {links.map((link) => (
             <li key={link.label}>
-              <NavLink to={link.to} className={({ isActive }) => isActive ? "active" : ""} onClick={onClose}>
+              <NavLink
+                to={link.to}
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={onClose}
+              >
                 <Icon name={link.icon} size={20} />
                 <span>{link.label}</span>
               </NavLink>
@@ -26,11 +37,18 @@ const Sidebar = ({ expanded, mobileOpen, onClose }) => {
         </ul>
       </nav>
       <div className="logout-wrapper">
-        <button className="logout">
+        <button className="logout" onClick={() => setShowLogout(true)}>
           <Icon name="logout" size={20} />
           <span>Logout</span>
         </button>
+
         <span className="sidebar-tooltip">Logout</span>
+
+        {showLogout && (
+          <ModalFrame onClose={() => setShowLogout(false)}>
+            <Logout onClose={() => setShowLogout(false)} />
+          </ModalFrame>
+        )}
       </div>
     </aside>
   );

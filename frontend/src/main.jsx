@@ -5,7 +5,6 @@ import Logout from "./components/Logout/Logout.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <App /> */}
-    <Logout />
+    <App />
   </StrictMode>,
 );

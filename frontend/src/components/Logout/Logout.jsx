@@ -1,6 +1,6 @@
 import "./Logout.css";
 
-const Logout = () => {
+const Logout = ({ onClose }) => {
   return (
     <div className="logout-container">
       <div className="top-section">
@@ -10,7 +10,7 @@ const Logout = () => {
       </div>
 
       <div className="button-section">
-        <button>Cancel</button>
+        <button onClick={onClose}>Cancel</button>
         <button>OK</button>
       </div>
     </div>
