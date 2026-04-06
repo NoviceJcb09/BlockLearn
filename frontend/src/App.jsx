@@ -1,6 +1,6 @@
+import "./App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, lazy, Suspense } from "react";
-import "./App.css";
 import DashboardLayout from "./components/DashboardLayout/DashboardLayout";
 import LoadingScreen from "./components/Loading/LoadingScreen";
 
