@@ -19,9 +19,11 @@ const UserNavbar = ({ onHamburgerClick }) => {
 
   return (
     <nav className="user-navbar">
-      <div className="hamburger-section">
-        <button className="hamburger" onClick={onHamburgerClick}>
-          <span /><span /><span />
+      <div className="hamburger-section" onClick={onHamburgerClick}>
+        <button className="hamburger">
+          <span />
+          <span />
+          <span />
         </button>
       </div>
       <div className="navbar-brand">
@@ -31,18 +33,28 @@ const UserNavbar = ({ onHamburgerClick }) => {
       <div className="nav-actions">
         <Icon name="notif-bell" size={28} className="notif-bell" />
         <div className="avatar-wrapper" ref={dropdownRef}>
-          <button className="user-avatar" onClick={() => setOpen((o) => !o)}>JC</button>
+          <button className="user-avatar" onClick={() => setOpen((o) => !o)}>
+            JC
+          </button>
 
           {open && (
             <div className="profile-dropdown">
               <div className="dropdown-top">
                 <span>johndoe@email.com</span>
-                <button className="close-btn" onClick={() => setOpen(false)}>✕</button>
+                <button className="close-btn" onClick={() => setOpen(false)}>
+                  ✕
+                </button>
               </div>
               <div className="dropdown-body">
                 <div className="dropdown-avatar">JC</div>
                 <p className="greeting">Hi, John!</p>
-                <button className="manage-btn" onClick={() => { navigate("/profile"); setOpen(false); }}>
+                <button
+                  className="manage-btn"
+                  onClick={() => {
+                    navigate("/profile");
+                    setOpen(false);
+                  }}
+                >
                   Manage your Profile
                 </button>
               </div>
