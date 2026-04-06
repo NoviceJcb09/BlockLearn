@@ -1,0 +1,47 @@
+.logout-container {
+  background-color: #f4f6fc;
+  outline: 1px dashed red;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .top-section {
+    & > :first-child {
+      color: #4a6fc3;
+    }
+
+    hr {
+      margin-top: 0.5rem;
+    }
+
+    p {
+      color: #5174c5;
+      margin-top: 0.8rem;
+    }
+  }
+
+  .button-section {
+    justify-content: flex-end;
+    display: flex;
+    gap: 0.5rem;
+
+    & > :first-child {
+      border: 1px solid #c0d0f7;
+    }
+
+    & > :last-child {
+      background-color: #6a87cd;
+    }
+
+    button {
+      width: 80px;
+      border-radius: 5px;
+      background-color: transparent;
+      border: none;
+      padding: 5px 10px;
+    }
+  }
+}
