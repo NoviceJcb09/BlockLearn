@@ -52,9 +52,16 @@ const Dashboard = () => {
         <hr />
 
         <div className="courses-container">
-          {courses.slice(0, 3).map((course, index) => (
-            <CourseCard key={course.id} index={index} {...course} />
-          ))}
+          {courses.length === 0 ? (
+            <div className="no-courses">
+              <span className="no-courses-icon">📚</span>
+              <p>No enrolled courses yet</p>
+            </div>
+          ) : (
+            courses.slice(0, 3).map((course, index) => (
+              <CourseCard key={course.id} index={index} {...course} />
+            ))
+          )}
         </div>
       </section>
     </div>

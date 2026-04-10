@@ -14,9 +14,16 @@ const Courses = () => {
       </section>
 
       <section className="courses-container">
-        {courses.map((course, index) => (
-          <CourseCard key={course.id} index={index} {...course} />
-        ))}
+        {courses.length === 0 ? (
+          <div className="no-courses">
+            <span className="no-courses-icon">📚</span>
+            <p>No enrolled courses yet</p>
+          </div>
+        ) : (
+          courses.map((course, index) => (
+            <CourseCard key={course.id} index={index} {...course} />
+          ))
+        )}
       </section>
     </div>
   );
