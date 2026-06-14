@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // })->middleware('auth:sanctum');
 
+Route::get('/courses', [CourseController::class, 'index']);
+
 Route::apiResource('courses', CourseController::class);
 Route::apiResource('units', UnitController::class);
 Route::apiResource('lessons', LessonController::class);
